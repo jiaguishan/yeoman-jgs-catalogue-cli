@@ -1,0 +1,13 @@
+{
+  "name": "yeoman-jgs-catalogue-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jiaguishan/yeoman-jgs-catalogue-cli.git",
+  "author": "贾贵山 <jiaguishan@mistong.com>",
+  "license": "MIT",
+  "bin": "cli.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "inquirer": "^8.1.2"
+  }
+}
