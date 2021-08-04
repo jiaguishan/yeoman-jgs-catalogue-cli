@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-console.log('这里是cli工具')
+// 此处的开头必须是此语句
 
 // 脚手架的工作过程
 // 1、通过命令行交互询问用户问题
@@ -33,7 +33,6 @@ inquirer.prompt([ // 第一个参数接受数组的参数，表示需要询问�
             // 拿到路径后，通过模板引擎去渲染文件
             ejs.renderFile(path.join(tempDir, file), answers, (err, result) => {
                 if (err) throw err;
-                console.log(result);
                 // 执行成功后通过文件的写入流将文件写入目标目录
                 fs.writeFileSync(path.join(targetDir, file), result); // 写入时需要文件的绝对路径，因此也需要path拿,最后参数是内容，是这里的result
             }) // 第一个参数是文件的绝对略经，所以需要使用path工具拿到, 第二个参数是数据上下文，第三个是回调
